@@ -164,6 +164,10 @@
         display: flex;
         justify-content: space-between;
         gap: 10rem;
+        @media screen and (max-width:520px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
     }
     .banner .banner__wrapper .banner__left{
         max-width: 80rem;
@@ -196,16 +200,18 @@
       text-align: center;
       font-size: 4rem;
       color: var(--clr-accent);
+      
     }
     .recipe .recipe__title::after{
       display: inline-block;
       position: relative;
       content: " ";
       background-color: var(--clr-accent);
-      width: 55rem;
-      height: .2rem;
+      width: 48rem;
+      height: .1rem;
       bottom: 7rem;
-      left: 45rem;
+      left: 48rem;
+      
 
     }
 
@@ -214,18 +220,19 @@
       position: relative;
       content: " ";
       background-color: var(--clr-accent);
-      width: 55rem;
+      width: 48rem;
       height: .1rem;
       top: 4.5rem;
-      right: 45rem;
+      right: 48rem;
 
     }
     .recipe .recipe__wrapper{
       display: flex;
+      justify-content: center;
     }
     .recipe .recipe__wrapper .recipe__left{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
       gap: 3rem;
     }
     .recipe .recipe__wrapper .recipe__left .recipe__card h4{
@@ -260,7 +267,8 @@
 .collection__title{
   font-size: 4rem;
   color: var(--clr-accent);
-  margin-bottom: 5rem;
+ 
+
 text-align: center;
 
 
@@ -270,13 +278,10 @@ text-align: center;
     position: relative;
     content: " ";
     background-color: var(--clr-accent);
-    width: 115rem;
-    height: .2rem;
+    width: 135rem;
+    height: .1rem;
     bottom: 1rem;
-   
-    
-  
- 
+
 }
 .collection__content {
   display: flex;
@@ -285,6 +290,10 @@ text-align: center;
   width: 100%;
   align-content: center;
   gap: 8rem;
+  @media screen and (max-width:520px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .collection__content:nth-child(odd){
   background-color: var(--clr-semilight);
@@ -343,11 +352,19 @@ text-align: center;
    font-weight: 600;
    color: var(--clr-light);
    margin-bottom: 5rem;
+   @media screen and (max-width:520px){
+    font-size: 4rem;
+   }
+   
+   
   }
   .background__wrapper p{
     font-size: 2rem;
     color: var(--clr-light);
     margin-bottom: 5rem;
+    @media screen and (max-width:520px){
+      font-size: 1.5rem;
+     }
    }
   .background .background__wrapper input{
     padding-top: 3rem;
@@ -358,6 +375,16 @@ text-align: center;
    .background .background__wrapper .background__button{
     display: flex;
     justify-content: center;
+    @media screen and (max-width:520px){
+      font-size: 2rem;
+      width: 20rem;
+      height: 6rem;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      text-align: center;
+     }
+
+    
    }
    /* Classic */
    .classic{
@@ -376,8 +403,8 @@ text-align: center;
     position: relative;
     content: " ";
     background-color: var(--clr-accent);
-    width: 120rem;
-    height: .2rem;
+    width: 110rem;
+    height: .1rem;
     bottom: 6.5rem;
     left: 30rem;
 
@@ -385,12 +412,14 @@ text-align: center;
 
   
   .classic .classic__wrapper .classic__left{
-    display: grid;
-    grid-template-columns: repeat(3,40rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  padding: 6rem 8rem;
   justify-content: center;
   padding-bottom: 10rem;
-  row-gap: 3rem;
-  column-gap: 4rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  
     
   }
 
@@ -439,7 +468,7 @@ word-spacing: .4rem;
     
     .btn{
         background-color: transparent;
-        border: transparent;
+        border: #2b2b2b;
         padding: 2rem 3rem;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         color: transparent;
